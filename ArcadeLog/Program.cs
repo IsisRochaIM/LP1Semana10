@@ -37,10 +37,14 @@ namespace ArcadeLog
                     }
                 }
                 int points = Convert.ToInt32(sPoints);
-                scores.Add(new Score(name, points ));
-
+                Score a = new Score(name, points );
+                scores.Add(a);
+                scores.Sort();
+                Console.WriteLine()
             }
+
             // CÓDIGO AQUI
+           
 
             // Ordena os Scores
             // CÓDIGO AQUI
