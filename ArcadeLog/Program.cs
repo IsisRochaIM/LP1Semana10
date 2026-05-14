@@ -40,7 +40,7 @@ namespace ArcadeLog
                 Score a = new Score(name, points );
                 scores.Add(a);
                 scores.Sort();
-                Console.WriteLine()
+                Console.WriteLine();
             }
 
             // CÓDIGO AQUI
