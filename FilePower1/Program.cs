@@ -9,9 +9,8 @@ namespace FilePower1
     {
         private static void Main(string[] args)
         {
-            Queue<string> files = new Queue<string>();
+            Queue<string> files = new();
             string fileName = args[0];
-            File.Create(fileName);
             
             while(true)
             {
@@ -22,10 +21,8 @@ namespace FilePower1
                 }
                 files.Enqueue(inp);
             }
-            string path;
-            path = $"C:\\LPSemana10\\{fileName}";
-            Console.WriteLine($"Path: {path}");
-            File.WriteAllLines(path, files);
+
+            File.WriteAllLines(fileName, files);
 
         }
     }
