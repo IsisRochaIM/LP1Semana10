@@ -12,6 +12,34 @@ namespace ArcadeLog
         {
             // Lê o Ficheiro e Cria os Scores
             List<Score> scores = new List<Score>();
+            int numOfArgs = args.GetLength();
+            if(numOfArgs == 1)
+            {
+                string inp = args[0];
+            }
+
+            using StreamReader sr = new StreamReader(inp);
+
+            while((s = sr.ReadLine()) != Null)
+            {
+                string name;
+                string sPoints;
+                bool space = false;
+                foreach(char i in s)
+                {
+                    if(space == true)
+                    {
+                        sPoints = sPoints + i;
+                    }
+                    else
+                    {
+                        name = name + i;
+                    }
+                }
+                int points = Convert.ToInt32(sPoints);
+                scores.Add(new Score(name, points ));
+
+            }
             // CÓDIGO AQUI
 
             // Ordena os Scores
